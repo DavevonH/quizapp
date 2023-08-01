@@ -2,8 +2,11 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-body {
-  background-color: ;
+
+:root {
+  --color-yellow: rgb(255, 215, 0);
+  --color-orange: rgb(255, 166, 0);
+  --color-white: rgb(255, 255, 255);
 }
 
 header {
@@ -14,27 +17,40 @@ header {
 }
 
 h1 {
-  color: rgb(255, 208, 0);
+  color: var(--color-yellow);
   text-decoration: solid;
   text-shadow: 1px 1px red;
 }
 
 section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(128, 128, 128, 0.55);
-    margin: 3px;
-    border-radius: 5px;
-    padding: 5px;
-  }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.55);
+  margin: 3px;
+  border-radius: 5px;
+}
 
 h2 {
-  color: rgb(255, 213, 0);
+  color: var(--color-yellow);
   text-decoration: solid;
   text-shadow: 1px 1px red;
   align-items: center;
   font-size: large;
+}
+
+button {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-style: solid;
+  border-color: var(--color-yellow);
+  border-radius: 2px;
+  box-shadow: 2px 2px red;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgba(255, 123, 0, 0.805);
 }
 
 ul {
@@ -42,15 +58,16 @@ ul {
   display: flex;
   flex-direction: row;
   list-style: none;
+  margin: 30px 0px 15px 0px;
 }
 
 li {
-    background-color: orange;
-    padding: 3px;
-    margin: 5px;
-    border-radius: 4px;
-    font-size: 10px;
-    color: rgb(255, 255, 255)
+  background-color: var(--color-orange);
+  padding: 3px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: var(--color-white);
 }
 
 nav {
@@ -59,4 +76,10 @@ nav {
   background-color: rgba(255, 127, 80, 0.83);
   border-radius: 5px;
   margin: 3px;
+  padding: 5px;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
 }
